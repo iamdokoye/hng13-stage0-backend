@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 
-// Your details (can be overridden by env if you want)
+// Details
 const USER_EMAIL = process.env.USER_EMAIL || "okoyedann@gmail.com";
 const USER_NAME  = process.env.USER_NAME  || "Daniel Okoye";
 const USER_STACK = process.env.USER_STACK || "Nodejs/Express";
@@ -52,4 +52,5 @@ app.use((err, _req, res, _next) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => console.log(`Stage0 backend listening on :${PORT}`));
